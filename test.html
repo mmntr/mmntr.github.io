@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            gap: 1cm;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            & > img:first-child {
+                height: 3.25em;
+                margin-right: -1mm;
+            }
+
+            & > img:nth-child(2) {
+                height: 4em;
+            }
+        }
+
+        .card {
+            background-color: #eaf6ff;
+            border-radius: 1cm;
+            padding: 1.5cm;
+            filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(18, 29, 74, 0.5));
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" style="">
+        <div class="logo">
+            <img src="/images/logo.svg" alt="">
+            <img src="/text.svg" alt="">
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="logo">
+            <img src="/images/logo1.svg" alt="">
+            <img src="/text.svg" alt="">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="logo">
+            <img src="/images/logo2.svg" alt="">
+            <img src="/text.svg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
