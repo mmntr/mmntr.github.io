@@ -73,6 +73,10 @@ nav {
         height: 1.3em;
     }
 
+    & > .burger {
+        display: flex;
+    }
+
     a {
         text-decoration: none;
         color: currentColor;
@@ -712,12 +716,36 @@ footer {
 
 @media screen and (max-width: 900px) {
     header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         align-items: center;
         justify-content: center;
         gap: 1rem;
         text-align: center;
+
+        position: relative;
+
         h1 {
             font-size: 4rem;
+        }
+
+        & > .left {
+            padding-inline-start: 0;
+            z-index: 2;
+        }
+
+        & > .right {
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+            max-width: 19vh;
+            height: fit-content;
+            object-fit: contain;
+
+            & > img {
+                border-radius: 1rem;
+
+            }
         }
     }
 
@@ -784,16 +812,26 @@ footer {
 
 
 @media screen and (max-width: 600px) {
+    nav {
+        padding: 0.5rem;
+        a {
+            button {
+                padding: 0.2rem 0.3rem;
+                margin: 0.1rem;
+                border: 0;
+            }
+        }
+    }
     body {
         font-size: 1.1rem;
     }
 
     header {
         h1 {
-            font-size: 2em;
+            font-size: 1.8em;
         }
-        span {
-            font-size: 1.2rem;
+        h2 {
+            font-size: 1.4em;
         }
     }
 
