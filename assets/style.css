@@ -246,6 +246,11 @@ footer {
 main > section {
     gap: 4rem;
     padding: 5rem;
+
+    &.email {
+        width: clamp(20rem, 50rem, 70rem);
+
+    }
 }
 
 .bi {
@@ -876,6 +881,11 @@ footer {
     }
     body {
         font-size: 1.1rem;
+    }
+
+    form .email_school_picker {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
     }
 
     header {
