@@ -1,13 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medimentor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/assets/glide.core.min.css" media="screen">
     <link rel="stylesheet" href="/assets/style.css">
     <html lang="sk">
@@ -24,10 +26,11 @@
     <meta name="apple-mobile-web-app-title" content="Medimentor" />
     <link rel="manifest" href="/webmanifest/site.webmanifest" />
 </head>
+
 <body>
     <nav>
         <a href="/">
-            <img src="/images/text.svg" alt="Medimentor">
+            <img src="/images/logotext.svg" alt="Medimentor">
         </a>
         <div class="burger">
             <a href="/">
@@ -38,13 +41,15 @@
     <header>
 
         <div class="left">
-            <h1>Mieriš na 
-                <span class="typewrite" data-period="2000" data-type='[ "medicínu?", "2. LF v Prahe?", "LF v Olomouci?", "3. LF v Prahe?", "LF MUNI?"]'>
+            <h1>Mieriš na
+                <span class="typewrite" data-period="2000"
+                    data-type='[ "medicínu?", "2. LF v Prahe?", "LF v Olomouci?", "3. LF v Prahe?", "LF MUNI?"]'>
                     <span class="wrap"></span>
                 </span>
             </h1>
-            <h2>Najlepšie ťa pripraví <span class="tag"> <img src="/images/text.svg" alt="" class="logo">.</span></h2>
-    
+            <h2>Najlepšie ťa pripraví <span class="tag"> <img src="/images/logotext.svg" alt="" class="logo">.</span>
+            </h2>
+
         </div>
         <div class="right">
             <img src="/images/stock/girl.jpg" alt="">
@@ -57,29 +62,87 @@
     </header>
     <main>
 
+
         <section class="email center">
             <h2>Modelové otázky na LF zdarma!</h2>
-            <p>Ponúkame ti modelové otázky na LF zdarma. Napíš nám e-mail, na ktorý ti ich môžme poslať</p>
-            <div class="row">
-                <input type="email" name="newsletter_email" placeholder="E-mail" id="">
-                <button class="button small">Poslať</button>
-            </div>
+            <h3>Aké modelovky ti máme zaslať?</h3>
+
+            <form action="https://medimentor.us1.list-manage.com/subscribe/post" method="POST">
+                <input type="hidden" name="u" value="1d62e0c8719ce9761f331ca8e">
+                <input type="hidden" name="id" value="da387bf083">
+
+
+                <div class="email_school_picker">
+                    <div class="column">
+
+                        <label class="checkbox" for="group_1">
+                            <input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1"
+                                name="group[64098][1]" value="1" class="av-checkbox"><span>🇨🇿 1LF</span>
+                        </label>
+                        <label class="checkbox" for="group_2">
+                            <input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2"
+                                name="group[64098][2]" value="1" class="av-checkbox"><span>🇨🇿 2LF</span> </label>
+                        <label class="checkbox" for="group_4"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[64098][4]" value="1"
+                                class="av-checkbox"><span>🇨🇿 3LF</span> </label>
+                        <label class="checkbox" for="group_8"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[64098][8]" value="1"
+                                class="av-checkbox"><span>🇨🇿 MED MUNI</span>
+                        </label>
+                        <label class="checkbox" for="group_16"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[64098][16]" value="1"
+                                class="av-checkbox"><span>🇨🇿 LF UPOL</span>
+                        </label>
+                    </div>
+                    <div class="column">
+                        <label class="checkbox" for="group_32"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[64098][32]" value="1"
+                                class="av-checkbox"><span>🇸🇰LF UK</span>
+                        </label>
+                        <label class="checkbox" for="group_64"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[64098][64]" value="1"
+                                class="av-checkbox"><span>🇸🇰JLF UK</span>
+                        </label>
+                        <label class="checkbox" for="group_128"><input type="checkbox"
+                                data-dojo-type="dijit/form/CheckBox" id="group_128" name="group[64098][128]" value="1"
+                                class="av-checkbox"><span>🇸🇰UPJŠ</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="adaptive_row">
+
+                    <div class="column">
+                        <label for="MERGE0">Email</label>
+                        <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25"
+                            value="">
+                    </div>
+                    <div class="column">
+                        <label for="MERGE1">Meno (napr. Júlia, Svetozár)</label>
+                        <input type="text" name="MERGE1" id="MERGE1" size="25" value=""><br>
+                    </div>
+                </div>
+
+
+                <button class="button small" type="submit">Poslať</button>
+            </form>
         </section>
 
-        <!--
+
 
         <section class="bi" id="first">
             <div>
                 <h2>Kto ťa na prijímačky<br> pripraví najlepšie?</h2>
                 <p>
                     Podľa nás sú to samotní študenti z lekárskych fakúlt!
-                     Ponúkame overený systém prípravy, ktorý kombinuje modelové otázky a hodiny s lektormi, ktorí študujú na LF<br>
+                    Ponúkame overený systém prípravy, ktorý kombinuje modelové otázky a hodiny s lektormi, ktorí študujú
+                    na LF<br>
 
                 </p>
             </div>
 
             <div>
-                <img src="/images/illustrations/3d-casual-life-pencil-case-notepad-glasses-and-papers-1.png" class="parallax_down" style="object-position: top; padding: 7rem 10rem;" alt="">
+                <img src="/images/illustrations/3d-casual-life-pencil-case-notepad-glasses-and-papers-1.png"
+                    class="parallax_down" style="object-position: top; padding: 7rem 10rem;" alt="">
             </div>
 
 
@@ -91,11 +154,13 @@
             <div>
                 <h2>Podpora na každom kroku</h2>
                 <p>
-                    Navigovať sa vo svete medicíny nie je ľahké.<br> Vďaka dohľadu a podpore našich lektorov nestratíš tempo.
+                    Navigovať sa vo svete medicíny nie je ľahké.<br> Vďaka dohľadu a podpore našich lektorov nestratíš
+                    tempo.
                 </p>
             </div>
             <div>
-                <img src="/images/illustrations/3d-casual-life-boy-and-girl-writing-with-chalk.png" style="object-position: top; background-image: linear-gradient(45deg, #b4daed, #e0e9ff);" alt="">
+                <img src="/images/illustrations/3d-casual-life-boy-and-girl-writing-with-chalk.png"
+                    style="object-position: top; background-image: linear-gradient(45deg, #b4daed, #e0e9ff);" alt="">
             </div>
         </section>
 
@@ -105,7 +170,8 @@
                 <h2>Moderná aplikácia</h2>
                 <p>
                     Maj modelové otázky vždy po ruke.
-                    Máme najmodernejšiu aplikáciu na prípravu na prijímačky. V našej appke môžeš scrollovať modelovky ako TikTok alebo Reelska. Algoritmus ťa pri tom nenápadne posúva práve v témach, ktoré ti nejdú.
+                    Máme najmodernejšiu aplikáciu na prípravu na prijímačky. V našej appke môžeš scrollovať modelovky
+                    ako TikTok alebo Reelska. Algoritmus ťa pri tom nenápadne posúva práve v témach, ktoré ti nejdú.
                 </p>
                 <span>
                     <br>
@@ -113,11 +179,11 @@
                 </span>
             </div>
             <div>
-                <img src="/images/screenshots/2.png" class="parallax_down"  alt="">
+                <img src="/images/screenshots/2.png" class="parallax_down" alt="">
             </div>
         </section>
 
- 
+
 
         <section class="bi inverse rf">
             <div>
@@ -135,7 +201,8 @@
             </div>
 
             <div>
-                <img src="/images/illustrations/graduated_doctor_sitting_on_a_pile_of_books.png" style="object-position: top;" alt="">
+                <img src="/images/illustrations/graduated_doctor_sitting_on_a_pile_of_books.png"
+                    style="object-position: top;" alt="">
             </div>
 
         </section>
@@ -157,11 +224,11 @@
                             <li>Vysvetlenia všetkých otázok</li>
                             <li>Vhodné pre samoukov</li>
                         </ul>
-        
+
                         <div class="button">
                             249€ <span class="small">/ rok</span>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="card">
@@ -174,12 +241,12 @@
                             <li>32 lekcií Chémie</li>
                             <li>32 lekcií Fyziky</li>
                         </ul>
-        
+
                         <div class="button">
                             599€ <span class="small">/ rok</span>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="card">
                     <div class="content">
@@ -191,7 +258,7 @@
                             <li>Osobný prístup</li>
 
                         </ul>
-        
+
                         <div class="button">
                             1199€ <span class="small">/ rok</span>
                         </div>
@@ -220,7 +287,7 @@
                 <div class="head">Modelové otázky</div>
                 <div class="head">Základný kurz</div>
                 <div class="head">Pokročilý kurz</div>
-                
+
                 <div>
                     3000+ modelovýtch otázok<br>
                     <span class="small">
@@ -233,13 +300,13 @@
 
                 <div>
                     Vysvetlene všetkých otázok
-                     
-                 </div>
-                 <div>✅</div>
-                 <div>✅</div>
-                 <div>✅</div>
 
-                 <div>
+                </div>
+                <div>✅</div>
+                <div>✅</div>
+                <div>✅</div>
+
+                <div>
                     Hodiny s lektormi
                     <br>
                     <span class="small">
@@ -292,9 +359,11 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Vďaka Medimentoru som získal prístup k najmodernejším lekciám, ktoré mi pomohli zdokonaliť sa v medicíne. Profesionálny prístup a osobné poradenstvo mi otvorili nové kariérne možnosti.</p>
+                            <p>Vďaka Medimentoru som získal prístup k najmodernejším lekciám, ktoré mi pomohli
+                                zdokonaliť sa v medicíne. Profesionálny prístup a osobné poradenstvo mi otvorili nové
+                                kariérne možnosti.</p>
                         </li>
-                        
+
                         <li class="glide__slide rating">
                             <img src="/images/profile/2.jpg" class="profile_pic">
                             <h3>Peter Horváth</h3>
@@ -305,7 +374,8 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Inovatívny spôsob vzdelávania a personalizované konzultácie mi umožnili získať cenné skúsenosti a výrazne zlepšiť moje odborné zručnosti.</p>
+                            <p>Inovatívny spôsob vzdelávania a personalizované konzultácie mi umožnili získať cenné
+                                skúsenosti a výrazne zlepšiť moje odborné zručnosti.</p>
                         </li>
 
                         <li class="glide__slide rating">
@@ -318,10 +388,11 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Medimentor ma naučil, ako efektívne komunikovať so svojimi pacientmi a posunúť sa na ďalšiu úroveň v mojej praxi. Odporúčam každému, kto chce excelovať!</p>
+                            <p>Medimentor ma naučil, ako efektívne komunikovať so svojimi pacientmi a posunúť sa na
+                                ďalšiu úroveň v mojej praxi. Odporúčam každému, kto chce excelovať!</p>
                         </li>
-                        
-                        
+
+
                         <li class="glide__slide rating">
                             <img src="/images/profile/5.jpg" class="profile_pic">
                             <h3>Lucia Kováčová</h3>
@@ -332,9 +403,10 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Platforma Medimentor je kľúčovým partnerom v mojom profesionálnom raste. Moderný prístup a praktické príklady z reálneho prostredia sú pre mňa neoceniteľné.</p>
+                            <p>Platforma Medimentor je kľúčovým partnerom v mojom profesionálnom raste. Moderný prístup
+                                a praktické príklady z reálneho prostredia sú pre mňa neoceniteľné.</p>
                         </li>
-                        
+
                         <li class="glide__slide rating">
                             <img src="/images/profile/4.jpg" class="profile_pic">
                             <h3>Marek Šimek</h3>
@@ -345,9 +417,10 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Od začiatku som bol ohromený kvalitou obsahu a podporou, ktorú ponúka Medimentor. Kurz nielen vzdeláva, ale aj motivuje k dosiahnutiu lepších výsledkov.</p>
+                            <p>Od začiatku som bol ohromený kvalitou obsahu a podporou, ktorú ponúka Medimentor. Kurz
+                                nielen vzdeláva, ale aj motivuje k dosiahnutiu lepších výsledkov.</p>
                         </li>
-                        
+
                         <li class="glide__slide rating">
                             <img src="/images/profile/6.jpg" class="profile_pic">
                             <h3>Katarína Dvořáková</h3>
@@ -358,13 +431,15 @@
                                 <img src="/assets/icons/star.svg" alt="">
                                 <img src="/assets/icons/star.svg" alt="">
                             </div>
-                            <p>Medimentor mi otvoril dvere k novým príležitostiam v zdravotníctve. Inovatívna platforma, ktorá posúva hranice vzdelávania a podporuje profesijný rozvoj, je skutočne inšpiratívna.</p>
+                            <p>Medimentor mi otvoril dvere k novým príležitostiam v zdravotníctve. Inovatívna platforma,
+                                ktorá posúva hranice vzdelávania a podporuje profesijný rozvoj, je skutočne
+                                inšpiratívna.</p>
                         </li>
-                        
+
 
 
                     </ul>
-                    
+
                 </div>
 
                 <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -375,7 +450,7 @@
                     <button class="glide__bullet" data-glide-dir="=4"></button>
                     <button class="glide__bullet" data-glide-dir="=5"></button>
 
-                  </div>
+                </div>
 
                 <div class="glide__arrows" data-glide-el="controls">
                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&larr;</button>
@@ -383,26 +458,25 @@
                 </div>
 
 
-                
+
             </div>
         </section>
 
-        
+
         <section class="center" id="cta">
             <h2>Potrebuješ poradiť?</h2>
             <p>
                 <a class="button">FAQ</a>
-                <a class="button" id="cta_button">Kontakty</a> 
+                <a class="button" id="cta_button">Kontakty</a>
             </p>
         </section>
-
-        -->
 
     </main>
     <footer>
         <div class="column">
             <div class="column">
-                <span class="tag light" style="font-size: 1.8rem; margin-bottom: 1rem;"> <img src="/images/logo.svg" alt="" class="logo"> Medimentor</span>
+                <span class="tag light" style="font-size: 1.8rem; margin-bottom: 1rem;"> <img src="/images/logo.svg"
+                        alt="" class="logo"> Medimentor</span>
                 <br>
                 <address>
                     <strong>Medimentor, s.r.o.</strong><br>
@@ -422,7 +496,7 @@
         </div>
         <div class="column">
             <a href="#">FAQ</a>
-            <a href="/app/Medimentor_test_2.apk" download>Aplikácia</a>
+            <a href="/app/Medimentor_test_3.apk" download>Aplikácia</a>
             <a href="#">Obchodné podmienky</a>
             <a href="#">Spracovanie osobných údajov</a>
         </div>
@@ -437,7 +511,7 @@
     <div id="modal" class="closed">
         <div class="modal_window">
             <h2>Kontakt</h2>
-            <p>Pokiaľ máš akékoľvek otázky, napíš nám E-mail alebo nám zavolaj</p> 
+            <p>Pokiaľ máš akékoľvek otázky, napíš nám E-mail alebo nám zavolaj</p>
             <div class="bi">
                 <div>
                     <h3>Telefón</h3>
@@ -450,10 +524,11 @@
             </div>
             <a class="button" id="modal_close">Zavrieť</a>
         </div>
-      </div>
-      <script src="/assets/glide.js"></script>
-      <script type="module" src="assets/simpleParallax.js"></script>
-      <script type="module" src="assets/index.js"></script>
+    </div>
+    <script src="/assets/glide.js"></script>
+    <script type="module" src="assets/simpleParallax.js"></script>
+    <script type="module" src="assets/index.js"></script>
 
 </body>
+
 </html>

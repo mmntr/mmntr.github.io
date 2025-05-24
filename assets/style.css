@@ -445,10 +445,58 @@ span.small {
     }
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    & > * {
+        width: 100%;
+    }
+    & .row {
+        width: 100%;
+        display: flex;
+
+    }
+
+    & .email_school_picker {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+
+        & label.checkbox {
+            border: 1px solid lightblue;
+            border-radius: 8px;
+
+            text-align: start;
+            margin-bottom: 0.5rem;
+
+            display: flex;
+            gap: 0.5rem;
+
+            &:has(input[type="checkbox"]:checked) {
+                background-color: lightblue;
+            }
+        }
+    }
+
+}
+
+.adaptive_row {
+    display: flex;
+    gap: 1rem;
+}
+
 input {
     font-size: 1.2rem;
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
+}
+
+label.checkbox {
+    padding: 0.2rem;
 }
 
 .logo {
@@ -747,6 +795,10 @@ footer {
 
             }
         }
+    }
+
+    .adaptive_row {
+        flex-direction: column;
     }
 
     main {
