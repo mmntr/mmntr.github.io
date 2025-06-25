@@ -1,6 +1,13 @@
 :root {
-    --border-radius: 4rem;
-    --primary: #6495ED;
+    --border-radius: 2rem;
+    --primary: #0F4C81;
+    --secondary: #405A77;
+    --light: #D1E3FF;
+    --surface: #FEFEFF;
+    --onSurface: #1C1B1F;
+    --success: #2E7D32;
+    --onSuccess: #D0F8CE;
+    --unit: 0.5rem;
 }
 
 *,*::before,*::after {
@@ -52,7 +59,7 @@ body {
 
     font-family: "Inter", sans-serif;
 
-    background-color: #EEE;
+    background-color: var(--surface);
 
     font-size: 1.2rem;
 
@@ -64,7 +71,6 @@ nav {
     padding-left: 2rem;
     display: flex;
     align-items: center;
-    background-color: #EEE;
     z-index: 10;
     position: absolute;
     top: 0;
@@ -122,7 +128,37 @@ img {
     max-height: 100%;
 }
 
+@keyframes slide {
+	0%,
+	50%,
+	100% {
+		transform: translateX(-50%) translateY(15%) scale(1.1);
+	}
 
+	25%,
+	75% {
+		transform: translateX(-50%) translateY(-15%);
+	}
+}
+
+@keyframes nudge {
+	0%,
+	50%,
+	100% {
+		transform: translateX(-50%) translateY(5%);
+	}
+
+	25%,
+	75% {
+		transform: translateX(-50%) translateY(-5%);
+	}
+}
+.video {
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
 
 header {
     width: 100%;
@@ -133,6 +169,11 @@ header {
     display: grid;
     grid-template-columns: 3fr 2fr;
 
+
+    /* background: radial-gradient(at bottom left, var(--primary), #00000000, #00000000);
+
+    */
+    background-image: url(/images/stock/gradient.jpg);
 
     & > .left {
         width: 100%;
@@ -158,14 +199,13 @@ header {
     }
 
 
-    & > .arrow {
+    & > .cta {
         position: absolute;
-        bottom: 3rem;
+        bottom: 5rem;
         left: 50%;
         transform: translateX(-50%);
-        & > a {
-            color: currentColor;
-        }
+        animation: nudge 2s ease 0s infinite normal forwards;
+
     }
     
 
@@ -182,12 +222,13 @@ header {
     */
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.6rem;
         margin: 0;
+        margin-bottom: 0.5rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 600;
 
         margin: 0;
@@ -238,7 +279,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     background-color: var(--primary);
-    color: #fff;
+    color: var(--surface);
 
     padding: 4rem;
 }
@@ -246,6 +287,8 @@ footer {
 main > section {
     gap: 4rem;
     padding: 5rem;
+    margin: calc(4*var(--unit)) 0;
+
 
     &.email {
         width: clamp(20rem, 50rem, 70rem);
@@ -264,6 +307,10 @@ main > section {
 
     text-align: center;
 
+    &.heteroform {
+        grid-template-columns: 1fr 2fr;
+    }
+
     &.lf {
         grid-template-columns: 3fr 2fr;
     }
@@ -281,11 +328,12 @@ main > section {
         max-height: 100%;
         display: flex;
         flex-direction: column;
+
+        align-items: center;
     }
 
     img {
-        width: 100%;
-        height: 100%;
+        width: 25rem;
         object-fit: cover;
         border-radius: var(--border-radius);
         max-height: 70vh;
@@ -321,26 +369,24 @@ span.small {
     }
 }
 
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(2*var(--unit));
+    gap: calc(4*var(--unit));
+}
+
 
 .card {
-    color: white;
     min-height: 20rem;
     width: 20rem;
     padding: 2rem;
-    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 10, 50, .5));
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(10, 10, 50, .1));
+    background-color: var(--light);
     border-radius: var(--border-radius);
-
-    &:nth-child(1) {
-        background-image: linear-gradient(240deg, #abbed9, #356ccf);
-    }
-
-    &:nth-child(2) {
-        background-image: linear-gradient(240deg, #6495ED, #244b91);
-    }
-
-    &:nth-child(3) {
-        background-image: linear-gradient(240deg, #5b85d0, #122a56);
-    }
 
 
     & > .content {
@@ -406,9 +452,10 @@ span.small {
     text-align: center;
 
     gap: 2rem;
+}
 
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+.small {
+    font-size: 1rem;
 }
 
 .reviews {
@@ -417,15 +464,21 @@ span.small {
 }
 
 .button {
-    background-color: var(--primary);
-    color: #fff;
-    padding: 1.2rem 2.2rem;
+    background-color: var(--onSurface);
+    color: var(--surface);
+    padding: calc(2*var(--unit)) calc(4*var(--unit));
     font-size: 1.4rem;
+    border: none;
     border-radius: var(--border-radius);
     text-decoration: none;
     transition: all .3s;
     margin: 0 0.5rem;
     cursor: pointer;
+
+    &.primary {
+        background-color: var(--primary);
+        color: var(--surface);
+    }
 
     &.outline {
         background-color: transparent;
@@ -436,14 +489,29 @@ span.small {
     &.small {
         padding: 1rem 1.8rem;
         font-size: 1.2rem;
-        
+    }
+
+    &.tiny {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
     }
 }
 
+.margin_vertical {
+    margin: 1rem 5rem;
+}
+
 .button:hover {
-    transform: scale(1.03) rotate(-1deg);
-    padding: 1.2rem 2.7rem;
-    margin: 0 0;
+    
+    &:not(.funky) {
+        margin: 0;
+    }
+    
+    &.funky {
+        transform: scale(1.03) rotate(-1deg);
+        padding: 1.2rem 2.7rem;
+        margin: 0 0;
+    }
 
     &.small {
         padding: 1rem 2.3rem;
@@ -527,6 +595,30 @@ label.checkbox {
     }
 
     
+}
+
+.nopaddingbottom {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.table {
+    display: grid;
+    gap: 0.5rem;
+
+    & > * {
+        padding: calc(1*var(--unit));
+        border-radius: var(--border-radius);
+    }
+
+    &.columns_2 {
+        grid-template-columns: 1fr 1fr;
+        & > *:nth-child(1), & > *:nth-child(2) {
+            background-color: var(--primary);
+            color: var(--surface);
+        }
+    }
+
 }
 
 
@@ -676,10 +768,21 @@ footer {
 
 }
 
+.timeline {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
 .row {
     display: flex;
     flex-direction: row;
 
+}
+
+.glide {
+    margin-bottom: 3rem;
 }
 
 .glide__bullets {
@@ -693,6 +796,28 @@ footer {
 
 .glide__slides {
     overflow: visible;
+}
+
+.lector_profile {
+    display: grid;
+    gap: calc(4*var(--unit));
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5rem;
+    height: 15rem;
+
+    & > img {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        border-radius: var(--border-radius);
+
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & > .description {
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+    }
 }
 
 .rating {
